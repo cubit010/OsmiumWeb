@@ -1,0 +1,30 @@
+﻿@page "/"
+
+<h3>Osmium UCI Console</h3>
+
+<input @bind="inputCommand" @bind:event="oninput" placeholder="Enter UCI command..." />
+<button @onclick="Send">Send</button>
+
+<div class="console-output">
+    @foreach (var line in log)
+    {
+        <div>@line</div>
+    }
+</div>
+
+@code {
+    string inputCommand = "";
+    List<string> log = new();
+
+    void Send()
+    {
+        if (string.IsNullOrWhiteSpace(inputCommand)) return;
+
+        var responses = Osmium.EngineApi.SendCommand(inputCommand);
+        log.Add($"> {inputCommand}");
+        foreach (var r in responses)
+            log.Add(r);
+
+        inputCommand = "";
+    }
+}
