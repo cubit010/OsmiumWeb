@@ -1,0 +1,243 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cheny\\OsmiumWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\pages\\chess.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:pages\\chess.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\wwwroot\\css\\chess.css||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:wwwroot\\css\\chess.css||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\wwwroot\\pieces.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:wwwroot\\pieces.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|c:\\users\\cheny\\osmiumweb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{145DEF34-741B-4147-CB62-63F962B9DDE1}|OsmiumWeb.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 526,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Chess.razor",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\Pages\\Chess.razor",
+              "RelativeDocumentMoniker": "Pages\\Chess.razor",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\Pages\\Chess.razor",
+              "RelativeToolTip": "Pages\\Chess.razor",
+              "ViewState": "AgIAABoBAAAAAAAAAAAswEoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T02:21:00.429Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Chess.css",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\css\\Chess.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\Chess.css",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\css\\Chess.css",
+              "RelativeToolTip": "wwwroot\\css\\Chess.css",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAswHkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T02:24:47.017Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-01T03:15:07.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\App.razor",
+              "RelativeDocumentMoniker": "App.razor",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\App.razor",
+              "RelativeToolTip": "App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T02:38:42.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "pieces.svg",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\pieces.svg",
+              "RelativeDocumentMoniker": "wwwroot\\pieces.svg",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\pieces.svg",
+              "RelativeToolTip": "wwwroot\\pieces.svg",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAeqSURBVFhHxZdrbBTXFcd/89rZh9/GNrYX24AfxIApYGgINIZAISQhHygxUYrbkEKUBAmqCqlUatKqkaq0iLaUAgXRSkWtm5aCGgkclRL1AcQ0joJ52GCMsY2xWby21w/sfc7cfvDuer02Bqkf\u002BpeO5s6Zuef87znnnrkD/08IIaR4XSxOnjx5CHg7VieEmHCdahyWw1VVVe/EmInicQTExo0b49VPjJaWFjo779Hd7cbn8zVWVVXNjX9Hjlc8CqMrMTHNqcTAMMYkKSmJnp5eNm3aBFB67Nixhni7T0wABOHojkewFdl7ENnzDSTXImR3BQwcIBQIkJqaGk1JZWUlhmGUHjx4cByJJyYw3rlA\u002BK4jD21Fdn0Fmn\u002BM2XKeUE8xhmcayp0PUFu/SWBkBNM0o7MqKysJBoOlR44cORLRqdGnkyDCvsPj5Yt2D\u002B29w\u002Bialw25p0jnF4TcI5gPbHQk/xQ5YTFSACRDwaG3keHaQSjDT3p6GsePH8fv9xMIBCgsLMTlcr0J7AJ8Uxbhb/94UgRyFnLTPUJWdhLls4ZZaf0eyvDfoNHLuaHt/DPwCm6PxNwZ6VQuLyYzSedhXx8O1zaGMo4i6RY8/f14vV5sNhtZWdOprq5m\u002B/bt2YDrkSko2FOz6ONOlXZZZ/5zpbz2pSbWJG5F7f8rXPbxj8xqGkreRVqwlIcLy6n1qPzk9HUaOgewp6QiOXJRVBWHw4HT6aSoqAin04ndbo9E1sqjaqBgT80iSRbfKdmwmiWLM9mk/4486T1ov4R5ReX30/5ErfIsI0kZ2NOTyM9LQZtTwO2E6Rw6d5OmLjemZQGSHDEvhWV8D2EyAgV7arJAvPPaG8\u002B9uDRfZ504RpL0G2iqxbii8X7PYc5fScd17T6ehnYCA8NYJMhMt5Ock8bdxByO/quVXnUNms0a02pEdDwlAYR444X1C1YvztFTVprV2KVquHGB0HWVC85TbH25ksPfepY960qomG6j\u002B\u002BJVjL5BHA6FtDQrloxU2r06f748gqJqYZ\u002BjWzji95EECr57Oj83O7ni6YU5Bcv4hETlODSfx7ihcrP0DCuWPU9umh0kyEqy8fy8HDYuyWe45R5KMERigkZyisZQ9gw\u002Bu9PHvb6HMG4LPyYFkiQtW7Ekr7BcbmS6uh9aP0E0SPw6uI/iuRXRaMb2hOWF0xjp6UMOhLBq4HBoOBI0Hpoqdc3dYy\u002BGncdjXB/QNbns2ZlGbon0PnSehqtwds6vuFFfxrc/vIwQZjiUkY\u002BOQJIkZASKKoEMuiJhs6r0WxK55RoMkx3vPDYC4whMS8C5Qq3WpcEaaITP83fTVfg6S\u002BbZQEjjzIy6B0wIhgQ\u002BQyIQAkVVUC0KvoQEHgx0xMx4TA0IIeTX59\u002Bcbw2dkLg9hFsqor74XWS7DVmVkDVQYkTVQFNAUcGiSmgyBASYoRAYIUwkgiEjJu9Rn\u002BMIRDuh8PwydWDgfJvNcypJaYLj5XVIOWXIqsKnf/h0NPSmCUIgEAgznIaYdCAEZoxu3ow0dr1QNq4Idd3KgQMH2Llz50ygTSW8euH6\u002BqsW9d8q7TIfZf2QgcRikmQZw2uiAD/fUo4sRfbxmMFYPEo/8X4MkRTIkuLeLHk8geFBh7/GvgV3AAb9BkFM9GQHt\u002B6PFlS8k4guXh/7LB4TijDYvtmp6XVFWlfIv6\u002BtwtXjlObYRkLYLBqSrpA2K4u/1LWzZ0MZaphy5DTX89DL9z\u002B8RP9wgESrimmYpNg1clPtrF1YwLy8adF3H9kHFKOnHO8w8oDZW90w92PR7Wl39wfpHwniDZkk5mUwnGDnZ2eucss1gGEKhnxBLt5y8cFHX2DLzyPvpdWkbVhL8str8ThnMTjip3RGeozjSUIRiYAw\u002B7MIhgj0cSmj7u8nL6eXZM6yJqYrmpwgIZGWYMG5tAhPs4tDF1oZ8QwiKTK21CRsTxVCZhbDyPQNBeluczO7tZG3Ni9HQnpsCmQA0zssCMGQh7uZd\u002BrcSii4t\u002BXcpZr7bT109AXofhjE4wctP5vsigXMfHE52V99moTyeRi5TgaETEePnzsNnSTevMbWNWVkpTgmrDzidwKB4V7vZUyw2tGBwJKj264izB8lXvkPensXt11eWnoDdI6EcAclelDpVzQeGAodHh/NHUMMXL9FSddVdq0tYfHsrAmOR31ODIcM8Oaqu5\u002BbPi7a81jldGIDlHsHtzSsyw2wKk0hq74ey7VbeBrv0dzUw9WWAZpu9NJb30rgs2tk1F\u002BiQvPwXuVyls/JifcxSSTGxgrAXBCGn9qiQmauX8/Wr1VR/IPtfDlo2FdvWP0SzzxViG74Ufs8JHu6kVpbSOm9T6HmZVGmzqvLZrPpmRKSHZao4Qjia0BVNWprazl79ux\u002BoD/aCV8BDUgBkkc7PL6V\u002B/d3vrVjBwKBYUROtxNzGq\u002BPaiYJu9VqY9\u002B\u002BfezevXsm0Bb9FpyA4Alwn4DbJ\u002BDOCejSHQ5kRcE0I0bGjthj9xGJhFlgmgLTNMNfz3G/aHHzJzsRxSAyQdM0LBYLFosVi0WPiq7bJhWbzYbNZp9U4jHlsfzo0aOHhBBvx69gslVNNY69Ajx48ODM3r17twGuKQmEYQ3XhjX\u002Bwf8AH9AP\u002BP4L6fLiZGSxnbQAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-10-01T02:36:01.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:9:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T02:13:53.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T02:13:25.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T02:13:24.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "bootstrap.js",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-01T02:13:04.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "wwwroot\\css\\app.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T02:04:52.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\cheny\\OsmiumWeb\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\cheny\\OsmiumWeb\\Pages\\Home.razor",
+              "RelativeToolTip": "Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T02:03:00.694Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 480,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
