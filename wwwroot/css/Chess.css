@@ -1,0 +1,122 @@
+﻿.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 45px);
+    grid-template-rows: repeat(8, 45px);
+    border: 2px solid #333;
+}
+
+
+.square {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .square.light {
+        background-color: #f0d9b5; /* light wood */
+    }
+
+    .square.dark {
+        background-color: #b58863; /* dark wood */
+    }
+
+.piece {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-image: url("/pieces.svg");
+    background-size: 270px 90px; /* full sheet size */
+}
+
+    /* --- White pieces (top row, y=0) --- */
+    .piece.white.k {
+        background-position: 0px 0px;
+    }
+    /* King */
+    .piece.white.q {
+        background-position: -45px 0px;
+    }
+    /* Queen */
+    .piece.white.b {
+        background-position: -90px 0px;
+    }
+    /* Bishop */
+    .piece.white.n {
+        background-position: -135px 0px;
+    }
+    /* Knight */
+    .piece.white.r {
+        background-position: -180px 0px;
+    }
+    /* Rook */
+    .piece.white.p {
+        background-position: -225px 0px;
+    }
+    /* Pawn */
+
+    /* --- Black pieces (bottom row, y = -45px) --- */
+    .piece.black.k {
+        background-position: 0px -45px;
+    }
+
+    .piece.black.q {
+        background-position: -45px -45px;
+    }
+
+    .piece.black.b {
+        background-position: -90px -45px;
+    }
+
+    .piece.black.n {
+        background-position: -135px -45px;
+    }
+
+    .piece.black.r {
+        background-position: -180px -45px;
+    }
+
+    .piece.black.p {
+        background-position: -225px -45px;
+    }
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* half transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.menu-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    min-width: 300px;
+}
+
+.menu-row {
+    margin: 1rem 0;
+}
+
+.menu-btn {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #444;
+    color: #fff;
+    font-weight: bold;
+}
+
+    .menu-btn:hover {
+        background: #666;
+    }

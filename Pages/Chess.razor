@@ -1,0 +1,330 @@
+﻿@page "/chess"
+@using Osmium
+@using System.Linq
+@using System.Collections.Generic
+@using System.Threading.Tasks
+
+<h3>Osmium Chess GUI</h3>
+
+<div class="controls">
+    <button @onclick="NewGame">New Game</button>
+    <button @onclick="() => SetPlayerColor(Color.White)">Play as White</button>
+    <button @onclick="() => SetPlayerColor(Color.Black)">Play as Black</button>
+</div>
+@if (ShowMenu)
+{
+    <div class="menu-overlay">
+        <div class="menu-box">
+            <h3>Game Setup</h3>
+
+            <div class="menu-row">
+                <button class="menu-btn" @onclick="() => StartGame(Color.White)">Play as White</button>
+                <button class="menu-btn" @onclick="() => StartGame(Color.Black)">Play as Black</button>
+            </div>
+
+            <div class="menu-row">
+                <label>Engine Move Time (ms):</label>
+                <input type="number" min="100" step="100" @bind="EngineMoveTime" />
+            </div>
+        </div>
+    </div>
+}
+<div class="board-log-container">
+    <div class="chessboard">
+        @for (int rank = 0; rank < 8; rank++)
+        {
+            <div class="rank">
+                @for (int file = 7; file >= 0; file--)
+                {
+                    int f = file;
+                    int r = rank;
+
+                    int squareIndex = r * 8 + f;
+                    var piece = BoardSquares[f, r];
+                    var squareColor = ((f + r) % 2 == 0) ? "light" : "dark";
+                    var highlightClass = HighlightedSquares.Contains(squareIndex) ? "highlight" : "";
+
+                    <div class="square @squareColor @highlightClass"
+                         @onclick="async () => await OnSquareClickAsync(r, f)">
+                        @if (!string.Equals(piece, "."))
+                        {
+                            var color = char.IsUpper(piece[0]) ? "white" : "black";
+                            var type = piece.ToLower(); // k, q, b, n, r, p
+                                                        <span class="piece @color @type"></span>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    <div class="console-log">
+        <h4>Engine Console</h4>
+        <pre>
+            @foreach (var line in EngineConsole)
+            {
+                    @line
+            }
+    </pre>
+    </div>
+    <div class="move-log">
+        <h4>Move Log</h4>
+        <table>
+            <thead>
+                <tr><th>#</th><th>Move</th></tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < AlgebraicMoveLog.Count; i++)
+                {
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@AlgebraicMoveLog[i]</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    // --- game state + UI arrays ---
+    private List<string> EngineConsole = new();
+
+    private void LogEngine(string message)
+    {
+        EngineConsole.Add(message);
+        if (EngineConsole.Count > 200) // keep it from exploding
+            EngineConsole.RemoveAt(0);
+        StateHasChanged();
+    }
+    private bool ShowMenu { get; set; } = true;
+    private int EngineMoveTime { get; set; } = 500; // default ms
+
+    private Board board = new();
+    private Color playerColor = Color.White;
+
+    private Move[] moveBuffer = new Move[512];
+    private int moveCount = 0;
+
+    private int selectedSourceSquare = -1;
+
+    private HashSet<int> HighlightedSquares = new();
+    // change to [rank, file] so first index is row (rank 0..7), second is column (file 0..7)
+    private string[,] BoardSquares = new string[8, 8];
+
+    private List<string> AlgebraicMoveLog = new();
+    private List<string> UciMoveHistory = new();
+
+    protected override void OnInitialized()
+    {
+        NewGame();
+    }
+    private void StartGame(Color color)
+    {
+        playerColor = color;
+        ShowMenu = false;
+        NewGame();
+    }
+
+    private void NewGame()
+    {
+        EngineApi.SendCommand("ucinewgame");
+        Fen.LoadStartPos(board);
+        moveCount = 0;
+        selectedSourceSquare = -1;
+        UciMoveHistory.Clear();
+        AlgebraicMoveLog.Clear();
+        HighlightedSquares.Clear();
+        UpdateBoardSquares();
+
+        if (playerColor == Color.Black)
+            EngineMove();
+    }
+
+    private void SetPlayerColor(Color color)
+    {
+        playerColor = color;
+    }
+
+    private void UpdateBoardSquares()
+    {
+        // NOTE: we use [rank, file] ordering here
+        for (int rank = 0; rank < 8; rank++)
+        {
+            for (int file = 0; file < 8; file++)
+            {
+                BoardSquares[rank, file] = board.GetPieceSymbol(file, rank) ?? string.Empty;
+            }
+        }
+        StateHasChanged();
+    }
+
+    private async Task OnSquareClickAsync(int file, int rank)
+    {
+        if (board.sideToMove != playerColor)
+            return;
+
+        int clickedSquare = rank * 8 + file;
+
+        if (selectedSourceSquare != -1)
+        {
+            moveCount = 0;
+            bool isWhite = board.sideToMove == Color.White;
+            MoveGen.FilteredLegalMoves(board, moveBuffer.AsSpan(), ref moveCount, isWhite);
+            var legalSpan = moveBuffer.AsSpan(0, moveCount);
+
+            Move? chosen = null;
+            for (int i = 0; i < moveCount; i++)
+            {
+                var m = moveBuffer[i];
+                if ((int)m.From == selectedSourceSquare && (int)m.To == clickedSquare)
+                {
+                    chosen = m;
+                    break;
+                }
+            }
+
+            if (chosen.HasValue)
+            {
+                var alg = MoveNotation.ToAlgebraicNotation(chosen.Value, legalSpan);
+                var uci = chosen.Value.ToString();
+
+                board.MakeRealMove(chosen.Value);
+
+                UciMoveHistory.Add(uci);
+                AlgebraicMoveLog.Add(alg);
+
+                selectedSourceSquare = -1;
+                HighlightedSquares.Clear();
+
+                UpdateBoardSquares();
+
+                if (board.sideToMove != playerColor)
+                    EngineMove();
+
+                return;
+            }
+            else
+            {
+                SelectPiece(file, rank);
+                return;
+            }
+        }
+
+        SelectPiece(file, rank);
+    }
+
+    private void SelectPiece(int file, int rank)
+    {
+        int clickedSquare = rank * 8 + file;
+
+        moveCount = 0;
+        bool isWhite = board.sideToMove == Color.White;
+        MoveGen.FilteredLegalMoves(board, moveBuffer.AsSpan(), ref moveCount, isWhite);
+
+        bool hasFrom = false;
+        HighlightedSquares.Clear();
+        for (int i = 0; i < moveCount; i++)
+        {
+            if ((int)moveBuffer[i].From == clickedSquare)
+            {
+                hasFrom = true;
+                HighlightedSquares.Add((int)moveBuffer[i].To);
+            }
+        }
+
+        if (!hasFrom)
+        {
+            selectedSourceSquare = -1;
+            HighlightedSquares.Clear();
+            return;
+        }
+
+        selectedSourceSquare = clickedSquare;
+    }
+
+    private void EngineMove()
+    {
+        string moves = UciMoveHistory.Count == 0 ? "" : string.Join(' ', UciMoveHistory);
+
+        string posCmd = string.IsNullOrEmpty(moves)
+            ? "position startpos"
+            : $"position startpos moves {moves}";
+
+        LogEngine($"> {posCmd}");
+        EngineApi.SendCommand(posCmd);
+
+        string goCmd = $"go movetime {EngineMoveTime}";
+        LogEngine($"> {goCmd}");
+        var goResp = EngineApi.SendCommand(goCmd);
+
+        foreach (var line in ToLines(goResp))
+        {
+            LogEngine($"< {line}");
+        }
+
+        var bestLine = ToLines(goResp).FirstOrDefault(l => l.StartsWith("bestmove"));
+        if (bestLine == null) return;
+
+        var parts = bestLine.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length < 2) return;
+
+        var bestUci = parts[1];
+        LogEngine($"Engine selected move: {bestUci}");
+
+        moveCount = 0;
+        bool isWhite = board.sideToMove == Color.White;
+        MoveGen.FilteredLegalMoves(board, moveBuffer.AsSpan(), ref moveCount, isWhite);
+        var legalSpan = moveBuffer.AsSpan(0, moveCount);
+
+        Move? chosen = FindMoveByUci(bestUci, legalSpan);
+        if (!chosen.HasValue)
+        {
+            LogEngine($"!! Could not match engine move {bestUci} to legal moves");
+            return;
+        }
+
+        var alg = MoveNotation.ToAlgebraicNotation(chosen.Value, legalSpan);
+
+        board.MakeRealMove(chosen.Value);
+        UciMoveHistory.Add(bestUci);
+        AlgebraicMoveLog.Add(alg);
+
+        UpdateBoardSquares();
+    }
+
+
+    private Move? FindMoveByUci(string uci, ReadOnlySpan<Move> legalSpan)
+    {
+        if (string.IsNullOrEmpty(uci) || uci.Length < 4) return null;
+        int fromFile = uci[0] - 'a';
+        int fromRank = uci[1] - '1';
+        int toFile = uci[2] - 'a';
+        int toRank = uci[3] - '1';
+        int fromSq = fromRank * 8 + fromFile;
+        int toSq = toRank * 8 + toFile;
+        bool hasPromo = uci.Length == 5;
+
+        for (int i = 0; i < legalSpan.Length; i++)
+        {
+            var m = legalSpan[i];
+            if ((int)m.From == fromSq && (int)m.To == toSq)
+            {
+                if (!hasPromo) return m;
+                if (m.ToString() == uci) return m;
+                return m;
+            }
+        }
+
+        return null;
+    }
+
+    private IEnumerable<string> ToLines(object resp)
+    {
+        if (resp == null) return Enumerable.Empty<string>();
+
+        if (resp is IEnumerable<string> lines) return lines;
+        if (resp is string s) return s.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        if (resp is string[] arr) return arr;
+        return new[] { resp.ToString() };
+    }
+}
